@@ -144,6 +144,26 @@
     XCTAssertTrue([firstCourse.name isEqualToString:@"Art"]);
 }
 
+- (void)testAverageCollectionOperator
+{
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Course"];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"students.@avg.grade >= 80"];
+    [request setPredicate:predicate];
+    
+    
+    NSError *fetchError;
+    NSArray *results = [context executeFetchRequest:request error:&fetchError];
+    XCTAssertNil(fetchError);
+    
+    XCTAssertEqual(results.count, 1);
+    
+    Course *firstCourse = [results firstObject];
+    XCTAssertTrue([firstCourse.name isEqualToString:@"Art"]);
+}
+
 
 - (void)loadDatabase
 {
