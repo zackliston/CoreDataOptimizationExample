@@ -1,7 +1,7 @@
 CoreDataOptimizationExample
 ===
 ###Purpose 
-The purpose of this project is to provide supporting examples for my blog post on optimizing CoreData. There are a series of tests in the file [TestFetchRequests](https://github.com/zackliston/CoreDataOptimizationExample/blob/master/CoreDataOptimizationExampleTests/TestFetchRequests.m) that show how to use the optimizations I describe. 
+The purpose of this project is to provide supporting examples for my [blog post on optimizing CoreDatad](http://agilemd.ghost.io/2015/02/02/optimizing-coredata-fetches/). There are a series of tests in the file [TestFetchRequests](https://github.com/zackliston/CoreDataOptimizationExample/blob/master/CoreDataOptimizationExampleTests/TestFetchRequests.m) that show how to use the optimizations I describe. 
 
 ###Usage
 In order to run these tests:<br>
